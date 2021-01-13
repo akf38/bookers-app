@@ -4,6 +4,7 @@ class BooksController < ApplicationController
 
 
   def index
+    puts "作成したキー　#{ENV['SECRET_KEY']}"
     @books = Book.all.order(id: "ASC")
     @book = Book.new
   end
